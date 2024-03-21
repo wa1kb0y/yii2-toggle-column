@@ -62,6 +62,8 @@ GridView::widget(
 				// 'enableAjax' => false,
 				// Uncomment if you want to hide it by some model's attribute
 				// 'hideAttribute' => 'is_toggle_hidden',
+				// 'onIcon' => 'glyphicon glyphicon-ok',
+                // 'offIcon' => 'glyphicon glyphicon-remove',
 			],
 			['class' => 'yii\grid\ActionColumn'],
 		],
@@ -69,4 +71,15 @@ GridView::widget(
 );
 
 Pjax::end();
+```
+
+### Button icon redefine
+You can redefine button icons by setting `onIcon` and `offIcon` in global params of Yii application.
+
+add in your 'params.php' or 'params-local.php:
+```php
+[
+    'toggleColumn.iconOn' => 'glyphicon glyphicon-ok',
+    'toggleColumn.iconOff' => 'glyphicon glyphicon-remove',
+]
 ```
